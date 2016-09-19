@@ -15,6 +15,7 @@ void hari_game()
 	cout << "add 4 " << endl;
 	cout << "divide with 2 " << endl;
 	cout << "subtract with 4 " << endl;
+	cout << "the result is 3 " << endl;
 }
 
 int main()

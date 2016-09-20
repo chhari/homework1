@@ -72,6 +72,7 @@ int main()
 	
 		if(game == 1){
 			//run game 1 (Ian's)
+			hogan_game();
 		}
 		else if(game == 2){
 			//run game 2 (Hari's)

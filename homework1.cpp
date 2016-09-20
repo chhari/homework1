@@ -1,11 +1,54 @@
 // AUTHOR 1 Ian Hogan hoganic@bu.edu
+// AUTHOR 2 Hari chhari@bu.edu
 
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
-//game main file
+void hogan_game()
+{
+	//Simple Higher Lower Game
+	int player_num;		//input number from the player
+	int comp_guess;		//computer's guess for the player's number
+	int counter = 1;
+	int acceptable;		//is the player's entry acceptable
+	clock_t start_clock, end_clock;
+	
+	//Decide what number to use
+	do
+	{
+		cout << "Pick a number in between 1 and 1,000,000" << endl;
+		cin >> player_num;
+		if(player_num > 1000000 || player_num < 1){
+			cout << "Invalid number, Please resubmit" << endl;
+			acceptable = 0;
+		}
+		else{
+			acceptable = 1;	
+		}
+	}
+	while(acceptable == 0);	
+
+	//Let's play a game 
+	start_clock = clock();	//time starts now
+
+	comp_guess = rand() % 1000000 + 1;	//pick a random number range 1 to 1000000
+	while(comp_guess != player_num){
+		comp_guess = rand() % 1000000 + 1;
+		counter++;
+	}
+	
+	end_clock = clock();	//time ends here
+	double milliSeconds = (double)(end_clock-start_clock)/((CLOCKS_PER_SEC) / 1000);
+	cout << "Your Number: " << player_num << endl;
+	cout << "Computer Guess: " << comp_guess << endl;
+	cout << "Number of Guesses: " << counter << endl;
+	cout << "Time Elapsed (mS): " << milliSeconds << endl;
+}
+
+
 void hari_game()
 {
 	int x;

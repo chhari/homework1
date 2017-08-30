@@ -1,4 +1,4 @@
-/ AUTHOR Hari Saran chhari@bu.edu
+// AUTHOR Hari Saran chhari@bu.edu
 #include <iostream>
 #include <ctime>
 using namespace std;
